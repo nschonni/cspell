@@ -29,7 +29,7 @@ jobs:
       debounce_info: ${{ toJSON(steps.debounce.outputs) }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/simple-debounce
         id: debounce
         with:
@@ -44,7 +44,7 @@ jobs:
       - debounce
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/echo
         with:
           value: |
